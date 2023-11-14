@@ -1,0 +1,41 @@
+@import '../../../styles/colors.scss';
+
+.session {
+  padding: 30px 0 0;
+
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+    color: $text-color-heading;
+
+    div {
+      &:first-child {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+
+        h3 {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 24px;
+    padding: 10px 0;
+    margin: 20px 0;
+    overflow: hidden;
+    height: 330px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .session {
+    &__list {
+      grid-template-columns: repeat(auto-fill, minmax(224px, 1fr));
+    }
+  }
+}

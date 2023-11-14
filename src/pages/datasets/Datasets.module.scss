@@ -1,0 +1,135 @@
+@import '../../styles/colors.scss';
+@import '../../styles/responsive.scss';
+
+.datasets {
+  &__heading {
+    display: flex;
+    padding: 24px 50px;
+    // margin-right: 50px;
+    justify-content: space-between;
+    align-items: center;
+
+    &-title {
+      color: $text-color-heading;
+      font-weight: 600;
+      font-size: 3.6rem;
+    }
+    &-summary {
+      color: $text-color;
+      padding: 24px 0;
+      font-weight: 300;
+      max-width: 485px;
+    }
+    &-btn {
+      display: inline;
+    }
+
+    &-img {
+      max-width: 240px;
+      height: auto;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &__filter {
+    padding: 4px 50px;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    background-color: #fff;
+
+    &--shadow {
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 2px 3px 0px, rgba(60, 64, 67, 0.15) 0px 6px 10px 4px;
+    }
+
+    &-search {
+      border: 1px solid #ddd;
+      border-radius: 50px;
+      padding: 6px 20px;
+      margin: 10px 0 20px;
+      display: flex;
+      gap: 20px;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+
+      input {
+        flex: 1;
+        font-size: 1.4rem;
+      }
+
+      &--circle {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: chartreuse;
+        position: absolute;
+        right: 82px;
+        top: 12px;
+      }
+    }
+    &-modal {
+      background-color: #fff;
+      position: absolute;
+      right: 30px;
+      top: calc(100% + 2px);
+      padding: 0 20px 20px;
+      border-radius: 20px;
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 11px 15px -7px, rgba(0, 0, 0, 0.14) 0px 24px 38px 3px,
+        rgba(0, 0, 0, 0.12) 0px 9px 46px 8px;
+
+      &-title {
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: $text-color-heading;
+        text-transform: uppercase;
+        padding-top: 20px;
+      }
+    }
+  }
+
+  &__content {
+    padding: 0 50px;
+  }
+
+  &__QA {
+    padding: 100px 50px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+
+    h1 {
+      font-weight: 600;
+      padding-bottom: 20px;
+    }
+  }
+}
+
+@include responsive_mobile {
+  .datasets {
+    &__heading {
+      padding: 24px 16px;
+    }
+
+    &__filter {
+      padding: 4px 16px;
+
+      &-search {
+        padding: 6px 16px;
+        gap: 10px;
+
+        input {
+          flex: auto;
+          font-size: 1.4rem;
+        }
+      }
+    }
+
+    &__content {
+      padding: 0 16px;
+    }
+  }
+}

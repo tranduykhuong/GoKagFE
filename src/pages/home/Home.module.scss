@@ -1,0 +1,141 @@
+@import '../../styles/colors.scss';
+@import '../../styles/responsive.scss';
+
+.home {
+  padding: 30px 50px;
+
+  &__heading {
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+
+    &-banner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+
+      &-text {
+        flex: 1;
+        align-content: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h1 {
+          color: $text-color-heading;
+          font-size: 4.4rem;
+          font-weight: 600;
+          position: relative;
+        }
+
+        p {
+          font-size: 1.6rem;
+          color: $text-color;
+          font-weight: 300;
+          padding: 20px 0 30px;
+          margin-right: 100px;
+          line-height: 24px;
+        }
+
+        &--btn {
+          display: flex;
+          // flex-wrap: wrap;
+          gap: 10px;
+          margin-bottom: 40px;
+          padding-right: 100px;
+        }
+      }
+
+      &-img {
+        flex: 1;
+        min-width: 300px;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+
+    &-who {
+      padding-top: 20px;
+      padding-bottom: 60px;
+      h2 {
+        margin-bottom: 40px;
+      }
+
+      .whoSession {
+        display: flex;
+        // flex-wrap: wrap;
+        gap: 20px;
+
+        &__item {
+          display: flex;
+
+          &-text {
+            flex: 1;
+            margin-right: 20px;
+
+            h3 {
+              font-size: 2rem;
+              margin-bottom: 4px;
+              color: $text-color-heading;
+            }
+            p {
+              font-size: 1.4rem;
+              font-weight: 300;
+              color: $text-color;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__session-end {
+    background: linear-gradient(0deg, rgb(248, 249, 250) 0%, rgba(248, 249, 250, 0) 100%);
+    border-bottom: 1px solid rgb(232, 234, 237);
+    position: absolute;
+    bottom: 0px;
+    height: 120px;
+    width: calc(100vw - 15px);
+    left: calc(50% - 50vw);
+  }
+}
+
+@include responsive_mobile {
+  .home {
+    padding: 30px 16px;
+
+    &__heading {
+      &-banner {
+        &-text {
+          max-width: calc(100vw - 32px);
+          h1 {
+            color: $text-color-heading;
+            font-size: 3.6rem;
+          }
+
+          p {
+            font-size: 1.4rem;
+          }
+        }
+      }
+
+      &-who {
+        .whoSession {
+          flex-wrap: wrap;
+
+          &__item {
+            width: 100%;
+            justify-content: space-between;
+          }
+        }
+      }
+    }
+
+    &__session-end {
+      width: 100vw;
+    }
+  }
+}

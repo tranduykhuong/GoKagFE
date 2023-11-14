@@ -1,0 +1,90 @@
+@import '../../styles/colors.scss';
+@import '../../styles/responsive.scss';
+
+.authFrame {
+  &__wrapper {
+    display: grid;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: all 0.3s ease-in-out;
+  }
+
+  display: flex;
+  padding: 20px 0px;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  gap: 10px;
+  width: 384px;
+  border-radius: 24px;
+  border: 1px solid rgb(218, 220, 224);
+  background: rgb(255, 255, 255);
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    gap: 6px;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+
+    img {
+      display: block;
+    }
+
+    h2 {
+      font-size: 2.6rem;
+      color: $text-color-heading;
+      font-weight: 600;
+    }
+
+    &-nav {
+      height: 48px;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+
+      &--item {
+        height: 100%;
+        line-height: 48px;
+        color: $text-color;
+      }
+
+      &--active {
+        border-bottom: 3px solid $text-color-heading;
+        color: $text-color-heading;
+      }
+    }
+  }
+
+  &__form {
+    width: 70%;
+  }
+
+  &__banner {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    user-select: none;
+    -webkit-user-drag: none;
+    pointer-events: none;
+  }
+}
+
+@include responsive_mobile {
+  .authFrame {
+    &__wrapper {
+      align-items: normal;
+    }
+
+    border: none;
+    width: 100vw;
+  }
+}

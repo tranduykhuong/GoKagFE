@@ -1,0 +1,91 @@
+@import '../../styles/colors.scss';
+@import '../../styles/responsive.scss';
+
+.formAnswer {
+  background-color: #ffe79c;
+  min-height: 100vh;
+  min-width: 100%;
+
+  &__form {
+    max-width: 850px;
+    border-radius: 6px;
+    margin: auto;
+    padding: 40px 0;
+  }
+
+  &__heading {
+    border-radius: 6px 6px 0 0;
+    padding: 50px;
+    background-color: #cf9500;
+    color: #fff;
+
+    &-title {
+      font-size: 3.2rem;
+      font-weight: 400;
+      padding-bottom: 18px;
+    }
+
+    &-summary {
+      font-size: 1.5rem;
+      line-height: 20px;
+    }
+
+    &-success {
+      color: white;
+      padding-bottom: 20px;
+      text-decoration: underline;
+      cursor: pointer;
+
+      &:hover {
+        color: aquamarine;
+      }
+    }
+  }
+
+  &__body {
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.7);
+
+    &-question {
+      padding-bottom: 10px;
+      span {
+        &:first-child {
+          font-size: 1.7rem;
+          color: $text-color-heading;
+        }
+        &:last-child {
+          color: red;
+          margin: 6px 4px;
+        }
+      }
+    }
+
+    &-input {
+      padding-top: 10px;
+      margin-left: 14px;
+      margin-bottom: 36px;
+
+      &:hover {
+        border: none;
+      }
+    }
+    &-required {
+      padding-top: 10px;
+      font-size: 1.3rem;
+      color: red;
+    }
+
+    &-submit {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}
+
+@include responsive_mobile {
+  .formAnswer {
+    &__form {
+      padding: 0;
+    }
+  }
+}

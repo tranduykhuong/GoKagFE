@@ -1,0 +1,113 @@
+@import '../../../styles/colors.scss';
+
+.dataCard {
+  margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  max-height: 742px;
+  overflow: auto;
+
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+
+    h2 {
+      font-weight: 500;
+      font-size: 2rem;
+      color: $text-color-heading;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    gap: 20px;
+    padding: 0 20px;
+
+    &-item {
+      color: $text-color;
+      height: 44px;
+      line-height: 44px;
+
+      &:hover {
+        color: $text-color-summary;
+        cursor: pointer;
+      }
+    }
+    &--active {
+      color: $text-color-heading;
+      border-bottom: 3px solid $text-color-heading;
+    }
+  }
+
+  &__wrapper_table {
+    background-color: white;
+    border-top: 1px solid rgb(236, 236, 237);
+    flex: 1 1 auto;
+    overflow-x: auto;
+    min-height: 550px;
+    max-height: fit-content;
+  }
+  &__table {
+    &-heading {
+      border-bottom: 1px solid rgb(236, 236, 237);
+      display: flex;
+      flex-direction: row;
+      height: fit-content;
+      width: fit-content;
+      position: sticky;
+      top: 0;
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+
+      &--col {
+        text-align: left;
+        position: relative;
+        background-color: white;
+        width: 130px;
+        min-width: 130px;
+        font-size: 1.3rem;
+        border-right: 1px solid rgb(236, 236, 237);
+        flex: 1 1 auto;
+        padding: 8px 12px;
+        color: rgb(95, 99, 104);
+        text-align: left;
+        vertical-align: top;
+        word-break: break-word;
+
+        span {
+          color: $text-color-heading;
+          font-weight: 400;
+        }
+      }
+
+      &--sticky {
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+      }
+    }
+
+    &-row {
+      border-bottom: 1px solid rgb(236, 236, 237);
+      background-color: rgb(255, 255, 255);
+      display: flex;
+      flex-direction: row;
+      height: fit-content;
+      width: fit-content;
+
+      &--col {
+        border-right: 1px solid rgb(236, 236, 237);
+        flex: 1 1 auto;
+        padding: 8px 12px;
+        color: rgb(95, 99, 104);
+        text-align: left;
+        vertical-align: top;
+        word-break: break-word;
+        font-size: 1.3rem;
+        font-weight: 400;
+        line-height: 16px;
+        width: 130px;
+        min-width: 130px;
+      }
+    }
+  }
+}

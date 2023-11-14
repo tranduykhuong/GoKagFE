@@ -1,0 +1,103 @@
+@import '../../styles/colors.scss';
+
+.cardSurveys {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #f8f8f8;
+  }
+
+  &__left {
+    display: flex;
+    min-width: 0px;
+    width: 100%;
+
+    &-img {
+      width: 70px;
+      height: 70px;
+      min-width: 70px;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+
+      img {
+        height: 100%;
+        width: auto;
+        object-fit: cover;
+      }
+    }
+
+    &-content {
+      padding: 4px 14px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-width: 0;
+      width: 100%;
+
+      & > h3 {
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: $text-color-heading;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      & > p {
+        font-size: 1.3rem;
+        font-weight: 300;
+        color: $text-color;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        span {
+          &:first-child {
+            margin-right: 6px;
+            padding: 4px 6px;
+            border-radius: 10px;
+            background-color: rgb(171, 255, 227);
+          }
+        }
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    align-items: flex-end;
+
+    &-status {
+      padding: 4px 8px;
+      border-radius: 20px;
+      color: #fff;
+      font-size: 1.3rem;
+      background-color: rgb(56, 112, 0);
+    }
+
+    &-author {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+
+      &--share {
+        cursor: pointer;
+        color: #888;
+
+        &:hover {
+          color: #333;
+        }
+      }
+    }
+  }
+}

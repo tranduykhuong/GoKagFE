@@ -1,0 +1,176 @@
+@import '../../styles/colors.scss';
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 1001;
+  background-color: #fff;
+  border-right: 1px solid #ddd;
+  color-scheme: light;
+  transition: width 0.2s 0.3s cubic-bezier(0, 0, 0.2, 1);
+  transform: translateX(0%);
+  width: 68px;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  &__createBtn {
+    flex-shrink: 0;
+    position: relative;
+
+    &-btn {
+      overflow: visible;
+      position: relative;
+
+      button {
+        -webkit-box-align: center;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+        border: 0px;
+        border-radius: 100px;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        box-sizing: border-box;
+        cursor: pointer;
+        display: flex;
+        height: 48px;
+        -webkit-box-pack: start;
+        justify-content: flex-start;
+        margin: 11px 0px 11px 10px;
+        outline: 0px;
+        overflow-x: hidden;
+        transition: all 0.3s 0.3s ease-in-out;
+        padding-left: 6px;
+        padding-right: 0px;
+        width: 48px;
+
+        span {
+          margin-left: 10px;
+          font-size: 1.6rem;
+          opacity: 0;
+          transition: opacity 0.2s 0.3s ease-in-out;
+          color: $text-color-heading;
+        }
+      }
+    }
+
+    &-options {
+      position: sticky;
+      top: 0;
+      z-index: 10000;
+
+      &-content {
+        position: absolute;
+        min-width: 256px;
+        top: 134px;
+        border-radius: 8px;
+        padding: 6px 0;
+        left: 6px;
+        box-shadow: rgba(0, 4, 7, 0.3) 0px 1px 2px, rgba(0, 4, 7, 0.15) 0px 2px 6px 2px;
+        background-color: rgb(255, 255, 255);
+
+        a {
+          padding: 10px 16px;
+          display: block;
+          color: $text-color-heading;
+          font-size: 1.4rem;
+          font-weight: 400;
+          display: flex;
+          align-items: center;
+          gap: 20px;
+
+          &:hover {
+            background-color: #ddd;
+          }
+        }
+      }
+    }
+  }
+
+  &__logo {
+    flex-shrink: 0;
+    overflow: hidden;
+    position: relative;
+
+    div {
+      display: flex;
+      align-items: center;
+      padding: 12px;
+    }
+    &-more {
+      min-width: 44px;
+      height: 44px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+
+      &:hover {
+        cursor: pointer;
+        background-color: #ccc;
+      }
+    }
+
+    img {
+      height: 30px;
+      padding-top: 4px;
+      margin-left: 11px;
+    }
+  }
+
+  &__list {
+    list-style: none;
+  }
+  &__item {
+    padding-left: 24px;
+
+    a {
+      display: flex;
+      align-items: center;
+      color: $text-color;
+      height: 44px;
+
+      p {
+        padding-left: 24px;
+      }
+    }
+
+    &:hover {
+      background-color: #f8f9fa;
+    }
+
+    &--active {
+      background-color: #f8f9fa;
+      border-right: 3px solid $text-color-heading;
+
+      a {
+        color: $text-color-heading;
+      }
+    }
+  }
+
+  &--active {
+    width: 250px;
+    box-sizing: none;
+    box-shadow: rgba(0, 0, 0, 0.28) 0px 0px 8px;
+
+    .sidebar__createBtn {
+      div {
+        button {
+          margin-left: 4px;
+          padding-left: 12px;
+          padding-right: 24px;
+          transition: all 0.3s 0.3s ease-in-out;
+          width: 135px;
+
+          span {
+            opacity: 1;
+            transition: opacity 41.6667ms linear 33.3333ms;
+          }
+        }
+      }
+    }
+  }
+}

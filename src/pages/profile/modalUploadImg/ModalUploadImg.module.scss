@@ -1,0 +1,103 @@
+@import '../../../styles/colors.scss';
+
+.modalUploadImg {
+  &__wrapper {
+    width: 0;
+    height: 0;
+    background-color: rgba($color: #000000, $alpha: 0.2);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1100;
+    overflow: hidden;
+
+    &--show {
+      width: 100vw;
+      height: 100vh;
+    }
+    &--hidden {
+      width: 0;
+      height: 0;
+    }
+  }
+
+  background-color: #fff;
+  height: 100%;
+  width: 760px;
+  transform: translateX(100%);
+  box-shadow: 2px 2px 8px #000;
+  transition: all 0.3s ease-in-out;
+
+  &--show {
+    transform: translateX(0);
+  }
+  &--hidden {
+    transform: translateX(100%);
+  }
+
+  &__heading {
+    display: flex;
+    gap: 20px;
+    padding: 10px 20px;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 500;
+      color: $text-color-heading;
+    }
+
+    &-close {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #ddd;
+      }
+    }
+  }
+
+  &__body {
+    padding: 20px 20px 70px;
+    height: calc(100% - 60px);
+    overflow-y: auto;
+    // background: url('https://www.kaggle.com/static/images/blobs/Blobs.png') right bottom / 500px no-repeat;
+
+    &-crop {
+      padding-top: 20px;
+      height: auto;
+
+      h5 {
+        padding: 8px 0;
+      }
+
+      img {
+        border: 1px solid #ccc;
+      }
+    }
+  }
+
+  &__btn {
+    position: sticky;
+    bottom: 0;
+    background-color: #fff;
+    width: 100%;
+    padding: 16px 30px;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px;
+  }
+}

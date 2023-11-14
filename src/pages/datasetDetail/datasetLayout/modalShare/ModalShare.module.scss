@@ -1,0 +1,62 @@
+@import '../../../../styles/colors.scss';
+
+.modalShare {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  z-index: 1100;
+  display: none;
+
+  &__content {
+    min-width: 380px;
+    background-color: #fff;
+    border-radius: 16px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    padding: 30px;
+    transform: translate(-50%, -100%);
+    transition: all 0.3s ease-in-out;
+    z-index: 1101;
+    color: $text-color-heading;
+
+    &--active {
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &-close {
+      padding: 0 0 20px;
+      cursor: pointer;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &-item {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      width: 100%;
+      padding: 10px !important;
+      margin-bottom: 2px;
+
+      &:hover {
+        background-color: #f3f3f3 !important;
+        border-radius: 10px;
+      }
+
+      p {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  &--active {
+    display: block;
+  }
+}

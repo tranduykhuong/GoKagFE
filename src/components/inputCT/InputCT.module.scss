@@ -1,0 +1,115 @@
+@import '../../styles/colors.scss';
+
+.inputCT {
+  position: relative;
+  padding-top: 14px;
+  margin-top: 8px;
+
+  &__title {
+    padding-bottom: 4px;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: #5f6368;
+  }
+
+  input {
+    padding: 4px;
+    font-size: 1.6rem;
+    font-weight: 400;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $triangle-color;
+    margin-bottom: 2px;
+  }
+
+  .input-eye {
+    position: absolute;
+    bottom: 0.6rem;
+    right: 1rem;
+    cursor: pointer;
+
+    &__icon {
+      color: $triangle-color;
+    }
+  }
+
+  .hiddenPlaceholder::placeholder {
+    color: transparent;
+  }
+
+  .label {
+    position: absolute;
+    top: 20px;
+    left: 6px;
+    color: $triangle-color;
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+
+  .focusAnimate {
+    animation: focusAnimate linear 0.3s forwards;
+  }
+
+  .unFocusAnimate {
+    animation: unFocusAnimate linear 0.3s forwards;
+  }
+
+  @keyframes focusAnimate {
+    to {
+      transform: translateY(-24px) translateX(-4px);
+    }
+  }
+  @keyframes unFocusAnimate {
+    from {
+      transform: translateY(-24px) translateX(-4px);
+    }
+    to {
+      transform: translateY(0) translateX(0);
+    }
+  }
+
+  input[type='password']::-ms-reveal,
+  input[type='password']::-ms-clear {
+    display: none;
+  }
+}
+
+.message {
+  height: 21px;
+
+  span {
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: #ff3434;
+  }
+}
+
+.standard.inputCT {
+  input {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  .label {
+    position: absolute;
+    top: 25px;
+    left: 8px;
+    color: #5f6368;
+  }
+
+  @keyframes focusAnimate {
+    to {
+      transform: translateY(-31px) translateX(-6px);
+    }
+  }
+  @keyframes unFocusAnimate {
+    from {
+      transform: translateY(-31px) translateX(-6px);
+    }
+    to {
+      transform: translateY(0) translateX(0);
+    }
+  }
+}

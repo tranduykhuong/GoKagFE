@@ -1,0 +1,26 @@
+@import '../../../styles/responsive.scss';
+
+.datasetsSession {
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+  padding-bottom: 50px;
+
+  &__end {
+    background: linear-gradient(0deg, rgb(248, 249, 250) 0%, rgba(248, 249, 250, 0) 100%);
+    border-bottom: 1px solid rgb(232, 234, 237);
+    position: absolute;
+    bottom: 0px;
+    height: 120px;
+    width: calc(100vw - 15px);
+    left: calc(50% - 50vw);
+  }
+}
+
+@include responsive_mobile {
+  .datasetsSession {
+    &__end {
+      width: 100vw;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@import '../../../../styles/colors.scss';
+
+.inputText {
+  input {
+    font-size: 1.5rem;
+    padding: 10px 14px;
+    width: 100%;
+    border-radius: 4px 4px 0 0;
+  }
+
+  &__line {
+    width: 100%;
+    display: block;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid #ddd;
+  }
+  &__animate {
+    border-top: none;
+    border-bottom: 2px solid $triangle-color;
+    animation: animate 0.3s ease-in-out;
+  }
+
+  &--disabled {
+    cursor: default;
+    pointer-events: none;
+
+    .inputText__line {
+      width: 90%;
+      border-bottom: 1px dashed #ccc;
+    }
+  }
+
+  @keyframes animate {
+    from {
+      max-width: 0;
+    }
+    to {
+      max-width: 100%;
+    }
+  }
+}

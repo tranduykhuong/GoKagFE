@@ -1,0 +1,43 @@
+@import '../../styles/colors.scss';
+
+.tag {
+  border: 1px solid #ddd;
+  border-radius: 40px;
+  padding: 8px 14px;
+  display: inline-flex;
+  align-items: center;
+  margin-right: 8px;
+  margin-bottom: 8px;
+
+  &:hover {
+    cursor: pointer;
+    border-color: $text-color-heading;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__title {
+    font-size: 1.4rem;
+    color: $text-color-heading;
+    font-weight: 300;
+  }
+
+  &__close {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    text-align: center;
+    line-height: 24px;
+
+    &:hover {
+      background-color: #cfcfcf;
+    }
+  }
+
+  &--active {
+    background-color: #e8eaed;
+    border: none;
+    cursor: default;
+    padding: 7px 14px;
+  }
+}

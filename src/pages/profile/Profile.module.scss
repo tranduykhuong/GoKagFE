@@ -1,0 +1,71 @@
+@import '../../styles/colors.scss';
+
+.profile {
+  padding: 30px 50px 80px;
+
+  &__general {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 4px;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+
+    &-avatar {
+      height: auto;
+      margin: auto;
+      margin-top: 8px;
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    &-info {
+      flex: 1;
+      margin-left: 12px;
+
+      &--item {
+        flex: 1;
+        display: flex;
+        column-gap: 14px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+
+    &-rank {
+      height: 100%;
+      padding: 20px;
+      padding-top: 10px;
+      padding-bottom: 26px;
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+      border-bottom-left-radius: 50px;
+      border-bottom-right-radius: 50px;
+      background-color: #fff0ca;
+      border: 1px solid $main-color;
+      text-align: center;
+      margin: auto;
+      margin-top: 6px;
+
+      h3 {
+        font-weight: 500;
+        font-size: 1.7rem;
+        color: $text-color-heading;
+      }
+    }
+  }
+
+  &__yourWork {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 4px;
+    margin-top: 20px;
+
+    &-title {
+      color: $text-color-heading;
+      font-weight: 500;
+    }
+  }
+}

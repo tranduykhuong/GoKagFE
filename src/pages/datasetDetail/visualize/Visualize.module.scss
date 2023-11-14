@@ -1,0 +1,46 @@
+@import '../../../styles/colors.scss';
+
+.visualize {
+  // max-width: 1200px;
+  // margin: auto;
+
+  &__heading {
+    font-size: 2.4rem;
+    color: $text-color-heading;
+    padding: 40px 0;
+  }
+
+  &__chart {
+    max-width: 1200px;
+    margin: auto;
+
+    &-item {
+      padding: 40px 30px;
+      border: 1px solid #ddd;
+      margin-bottom: 20px;
+      border-radius: 14px;
+    }
+
+    &-label {
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: $text-color-heading;
+      padding-bottom: 20px;
+    }
+
+    &-list {
+      max-height: 400px;
+      overflow: auto;
+
+      div {
+        font-size: 1.4rem;
+        padding: 14px;
+        background-color: rgb(248, 249, 250);
+        border-radius: 5px;
+        margin-bottom: 6px;
+        font-weight: 400;
+        color: $text-color-heading;
+      }
+    }
+  }
+}
